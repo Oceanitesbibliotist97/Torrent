@@ -12,6 +12,10 @@ BitTorrent-клиент, который ничего не собирает, ни
   <a href="SECURITY.md">Модель безопасности</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/ClearNetSky/Torrent/actions/workflows/ci.yml"><img src="https://github.com/ClearNetSky/Torrent/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+</p>
+
 ![Загрузки](docs/screenshots/transfers-dark.png)
 
 ## Зачем

@@ -12,6 +12,10 @@ A BitTorrent client that collects nothing, installs nothing and is honest about 
   <a href="SECURITY.md">Security model</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/ClearNetSky/Torrent/actions/workflows/ci.yml"><img src="https://github.com/ClearNetSky/Torrent/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+</p>
+
 ![Transfers](docs/screenshots/transfers-dark.png)
 
 ## Why
