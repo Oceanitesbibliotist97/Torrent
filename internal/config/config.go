@@ -20,6 +20,10 @@ import (
 
 const fileName = "settings.json"
 
+// invalidSuffix is appended to a settings file that cannot be parsed, so the
+// user can recover values by hand instead of losing them to a fresh default file.
+const invalidSuffix = ".invalid"
+
 // Network modes.
 const (
 	// NetworkDirect uses the default route. Peers see the real IP address.
@@ -77,7 +81,7 @@ type Settings struct {
 	VPNInterface  string `json:"vpnInterface"`
 	// AutoReconnect resumes transfers when the VPN comes back after the kill
 	// switch stopped them. The kill switch itself is always active.
-	AutoReconnect bool `json:"autoReconnect"`
+	AutoReconnect bool   `json:"autoReconnect"`
 	Proxy         Proxy  `json:"proxy"`
 	BlocklistPath string `json:"blocklistPath"`
 }
@@ -219,6 +223,7 @@ func (st *Store) Load() (s Settings, firstRun bool, err error) {
 	}
 	disk := onDisk{Settings: Defaults()}
 	if err := json.Unmarshal(data, &disk); err != nil {
+		_ = os.Rename(st.path, st.path+invalidSuffix)
 		return Defaults(), false, fmt.Errorf("parse %s: %w", fileName, err)
 	}
 	s = disk.Settings

@@ -100,3 +100,24 @@ func TestValidate(t *testing.T) {
 		t.Errorf("valid proxy settings rejected: %v", err)
 	}
 }
+
+func TestCorruptSettingsArePreservedNotOverwritten(t *testing.T) {
+	dir := t.TempDir()
+	path := filepath.Join(dir, fileName)
+	if err := os.WriteFile(path, []byte(`{"language": "ru", "downloadDir": "C:\Users"`), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	s, firstRun, err := NewStore(dir).Load()
+	if err == nil {
+		t.Fatal("a corrupt settings file must be reported, not ignored")
+	}
+	if firstRun || s.NetworkMode != NetworkDirect {
+		t.Errorf("expected defaults, got firstRun=%v mode=%q", firstRun, s.NetworkMode)
+	}
+	if _, err := os.Stat(path + invalidSuffix); err != nil {
+		t.Errorf("the unreadable file must be kept for recovery: %v", err)
+	}
+	if _, err := os.Stat(path); !os.IsNotExist(err) {
+		t.Errorf("the unreadable file must be moved aside: %v", err)
+	}
+}
